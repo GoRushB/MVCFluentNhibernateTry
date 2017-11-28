@@ -1,0 +1,10 @@
+﻿@model real_MVC_fluent_nhibernate_try.Models.Store
+
+@{
+    ViewBag.Title = "Type";
+}
+
+<h2>选择要查看的内容：</h2>
+<li>@Html.ActionLink("商品", "Browse_Product", new { storename = Model.Name })</li>
+<br />
+<li>@Html.ActionLink("员工", "Browse_Employee", new { storename = Model.Name })</li>

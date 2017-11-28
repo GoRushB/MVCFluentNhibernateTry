@@ -1,0 +1,19 @@
+﻿@model real_MVC_fluent_nhibernate_try.Models.Product
+
+@{
+    ViewBag.Title = "Details_Product";
+}
+<p>
+    <img alt="@Model.Name" src="@Model.ProductArtUrl" />
+</p>
+<div id="product-details">
+    <p>
+        <em>编号:</em> @Model.ProductId
+    </p>
+    <p>
+        <em>名称:</em> @Model.Name
+    </p>
+    <p>
+        <em>价格:</em> @String.Format("{0:F}", Model.Price)
+    </p>
+</div>

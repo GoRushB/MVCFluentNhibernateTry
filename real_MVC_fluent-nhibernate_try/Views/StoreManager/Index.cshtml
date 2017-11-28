@@ -1,0 +1,46 @@
+﻿@model IEnumerable<real_MVC_fluent_nhibernate_try.Models.Store>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<p>
+    @Html.ActionLink("创建商店", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StoreId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StoreArtUrl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StoreId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StoreArtUrl)
+        </td>
+        <td>
+            @Html.ActionLink("修改", "Edit", new { id=item.StoreId }) |
+            @Html.ActionLink("详情", "Details", new { id=item.StoreId }) |
+            @Html.ActionLink("删除", "Delete", new {id = item.StoreId}) |
+            <a href="/ProductManager/Index">商品管理 |</a>
+            <a href="/EmployeeManager/Index?storeid=@item.StoreId">员工管理</a>
+        </td>
+    </tr>
+}
+
+</table>

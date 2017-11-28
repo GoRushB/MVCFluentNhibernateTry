@@ -1,0 +1,16 @@
+﻿@model real_MVC_fluent_nhibernate_try.Models.Employee
+
+@{
+    ViewBag.Title = "Details_Employee";
+}
+<p>
+    <img alt="@Model.Name" src="@Model.EmployeeArtUrl" />
+</p>
+<div id="employee-details">
+    <p>
+        <em>编号:</em> @Model.EmployeeId
+    </p>
+    <p>
+        <em>姓名:</em> @Model.Name
+    </p>
+</div>

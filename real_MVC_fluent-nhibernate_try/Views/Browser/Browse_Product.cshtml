@@ -1,0 +1,16 @@
+﻿@model real_MVC_fluent_nhibernate_try.Models.Store
+
+@{
+    ViewBag.Title = "Browse_Product";
+}
+
+@foreach (var product in Model.Products)
+{
+    <li>
+        <a href="Details_Product/@product.ProductId">
+            <img src="@product.ProductArtUrl" alt="@product.Name" />
+            &nbsp; &nbsp;@Html.ActionLink(product.Name, "Details_Product", new { id = product.ProductId })
+        </a>
+    </li>
+    <br /><br />
+}

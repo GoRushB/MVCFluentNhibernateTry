@@ -1,0 +1,35 @@
+﻿@model real_MVC_fluent_nhibernate_try.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>详情</h2>
+
+<div>
+    <h4>员工</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeArtUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeArtUrl)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("修改", "Edit", new { id = Model.EmployeeId }) |
+    @Html.ActionLink("删除", "Delete", new { id = Model.EmployeeId }) |
+    @Html.ActionLink("返回", "Index",new {storeid=Model.Store.StoreId})
+</p>

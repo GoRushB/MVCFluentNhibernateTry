@@ -1,0 +1,16 @@
+﻿@model real_MVC_fluent_nhibernate_try.Models.Store
+
+@{
+    ViewBag.Title = "Browse_Employee";
+}
+
+@foreach (var employee in Model.Employees)
+{
+    <li>
+        <a href="Details_Employee/@employee.EmployeeId">
+            <img src="@employee.EmployeeArtUrl" alt="@employee.Name" />
+            &nbsp; &nbsp;@Html.ActionLink(employee.Name, "Details_Employee", new { id = employee.EmployeeId })
+        </a>
+    </li>
+    <br /><br />
+}

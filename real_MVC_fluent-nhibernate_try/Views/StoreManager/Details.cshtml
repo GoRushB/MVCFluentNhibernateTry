@@ -1,0 +1,35 @@
+﻿@model real_MVC_fluent_nhibernate_try.Models.Store
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>详情</h2>
+
+<div>
+    <h4>商店</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreArtUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreArtUrl)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("修改", "Edit", new { id = Model.StoreId }) |
+    @Html.ActionLink("删除", "Delete", new { id = Model.StoreId }) |
+    @Html.ActionLink("返回", "Index")
+</p>

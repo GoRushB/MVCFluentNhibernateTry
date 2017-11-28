@@ -1,0 +1,20 @@
+﻿@model real_MVC_fluent_nhibernate_try.Models.Employee
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>删除</h2>
+
+<p>
+    你打算删除员工<img src="@Model.EmployeeArtUrl" /><strong>@Model.Name</strong>吗?
+</p>
+@using(Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="删除" />
+    </p>
+    <p>
+        @Html.ActionLink("返回", "Index",new {storeid=Model.Store.StoreId})
+    </p>
+}

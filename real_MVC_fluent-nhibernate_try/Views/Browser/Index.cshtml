@@ -1,0 +1,22 @@
+﻿@model IEnumerable<real_MVC_fluent_nhibernate_try.Models.Store>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    浏览商店
+</h2>
+<p>
+    从 @Model.Count() 个商店中选择一个浏览:
+</p>
+@foreach (var store in Model)
+{
+    <li>
+        <a href="Type/@store.StoreId">
+            <img src="@store.StoreArtUrl" alt="@store.Name" />
+            &nbsp;&nbsp;@Html.ActionLink(store.Name, "Type", new { id = store.StoreId })
+        </a>
+    </li>
+    <br /><br />
+}
